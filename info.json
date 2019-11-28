@@ -1,0 +1,10 @@
+{
+  "name":"chonky-trains",
+  "title":"Chonky Trains",
+  "description":"Tired of tiny toy trains? Give your factory some real weight with these realistically-scaled locomotives and wagons.",
+  "author":"therax",
+  "homepage":"https://mods.factorio.com/mod/chonky-trains",
+  "factorio_version":"0.17",
+  "version":"0.1.0",
+  "dependencies":[]
+}
