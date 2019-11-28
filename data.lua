@@ -122,6 +122,20 @@ local function create_rolling_stock(proto)
       data:extend{recipe}
     end   
   end
+
+  if proto.corpse then
+    local corpse = table.deepcopy(data.raw.corpse[proto.corpse])
+    corpse.name = "chonky-"..corpse.name
+    local layers = corpse.animation.layers or {corpse.animation}
+    for _, layer in pairs(layers) do
+      layer.scale = 1.5
+      if layer.hr_version then
+        layer.hr_version.scale = 0.75
+      end
+    end
+    chonky.corpse = corpse.name
+    data:extend{corpse}
+  end
 end
 
 for _, proto_type in pairs{"cargo-wagon", "fluid-wagon", "locomotive"} do
