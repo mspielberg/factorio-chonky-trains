@@ -1,18 +1,6 @@
 local pictures = require "pictures"
 local du = require "util"
 
-local connection_distances = {
-  ["cargo-wagon"] = 4,
-  ["fluid-wagon"] = 4,
-  ["locomotive"] = 4,
-}
-
-local joint_distances = {
-  ["cargo-wagon"] = 10,
-  ["fluid-wagon"] = 10,
-  ["locomotive"] = 9,
-}
-
 local weights = {
   ["cargo-wagon"] = 10000,
   ["fluid-wagon"] = 10000,
@@ -78,11 +66,11 @@ local function create_rolling_stock(proto)
     chonky[k] = table.deepcopy(v)
   end
   chonky.name = "chonky-"..chonky.name
-  du.scale_bounding_box(chonky.collision_box, 1.5, 2.3)
-  chonky.selection_box = {{-1.5, -6}, {1.5, 6}}
-  --du.scale_bounding_box(chonky.selection_box, 1.5, 2.3)
-  chonky.connection_distance = connection_distances[proto.type]
-  chonky.joint_distance = joint_distances[proto.type]
+  chonky.collision_box = {{-1, -5.6}, {1, 5.6}}
+  chonky.selection_box = {{-1.5, -6.5}, {1.5, 6.5}}
+  chonky.drawing_box = {{-1.5, -8}, {1.5, 7}}
+  chonky.connection_distance = 6
+  chonky.joint_distance = 8
   chonky.vertical_selection_shift = -1
 
   if chonky.burner then

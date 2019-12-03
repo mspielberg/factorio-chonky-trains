@@ -1,3 +1,42 @@
+local chonky_wheels =
+{
+  priority = "very-low",
+  width = 115,
+  height = 115,
+  direction_count = 256,
+  filenames =
+  {
+    "__base__/graphics/entity/diesel-locomotive/train-wheels-01.png",
+    "__base__/graphics/entity/diesel-locomotive/train-wheels-02.png"
+  },
+  line_length = 8,
+  lines_per_file = 16,
+  scale = 1.5,
+  shift = {0, -16/48},
+  hr_version =
+  {
+    priority = "very-low",
+    width = 229,
+    height = 227,
+    direction_count = 256,
+    filenames =
+    {
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-1.png",
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-2.png",
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-3.png",
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-4.png",
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-5.png",
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-6.png",
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-7.png",
+      "__base__/graphics/entity/diesel-locomotive/hr-train-wheels-8.png"
+    },
+    line_length = 4,
+    lines_per_file = 8,
+    shift = {0, -16/48},
+    scale = 0.75
+  }
+}
+
 return
 {
   ["cargo-wagon"] =
@@ -333,107 +372,9 @@ return
         }
       }
     },
+    wheels = chonky_wheels,
   },
   ["fluid-wagon"] =
-  --[[{
-    pictures =
-    {
-      layers =
-      {
-        {
-          priority = "very-low",
-          slice = 4,
-          width = 416,
-          height = 420,
-          back_equals_front = true,
-          direction_count = 128,
-          allow_low_quality_rotation = true,
-          filenames =
-          {
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-1.png",
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-2.png",
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-3.png",
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-4.png"
-          },
-          line_length = 4,
-          lines_per_file = 8,
-          shift = {0 + 0.013, -1.3845},
-          hr_version =
-          {
-            priority = "very-low",
-            slice = 4,
-            width = 832,
-            height = 838,
-            back_equals_front = true,
-            direction_count = 128,
-            allow_low_quality_rotation = true,
-            filenames =
-            {
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-1.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-2.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-3.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-4.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-5.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-6.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-7.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-8.png"
-            },
-            line_length = 4,
-            lines_per_file = 4,
-            shift = {0 + 0.013, -1.3845},
-            scale = 0.5
-          }
-        },
-        {
-          flags = { "shadow" },
-          priority = "very-low",
-          slice = 4,
-          width = 502,
-          height = 376,
-          back_equals_front = true,
-          draw_as_shadow = true,
-          direction_count = 128,
-          allow_low_quality_rotation = true,
-          filenames =
-          {
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-shadow-1.png",
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-shadow-2.png",
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-shadow-3.png",
-            "__chonky-trains__/graphics/entity/chonky-fluid-wagon/chonky-fluid-wagon-shadow-4.png"
-          },
-          line_length = 4,
-          lines_per_file = 8,
-          shift = {0.875 + 0.013, 0.58425},
-          hr_version =
-          {
-            flags = { "shadow" },
-            priority = "very-low",
-            slice = 4,
-            width = 1002,
-            height = 750,
-            back_equals_front = true,
-            draw_as_shadow = true,
-            direction_count = 128,
-            allow_low_quality_rotation = true,
-            filenames =
-            {
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-shadow-1.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-shadow-2.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-shadow-3.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-shadow-4.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-shadow-5.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-shadow-6.png",
-              "__chonky-trains__/graphics/entity/chonky-fluid-wagon/hr-chonky-fluid-wagon-shadow-7.png"
-            },
-            line_length = 4,
-            lines_per_file = 5,
-            shift = {0.875 + 0.013, 0.58425},
-            scale = 0.5
-          }
-        }
-      }
-    },
-  },]]
   {
     pictures =
     {
@@ -534,6 +475,7 @@ return
         }
       }
     },
+    wheels = chonky_wheels,
   },
   ["locomotive"] =
   {
@@ -679,5 +621,6 @@ return
         }
       }
     },
+    wheels = chonky_wheels,
   }
 }
