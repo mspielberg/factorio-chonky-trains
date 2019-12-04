@@ -74,6 +74,12 @@ local function create_rolling_stock(proto)
   chonky.vertical_selection_shift = -1
 
   if chonky.burner then
+    if data.raw["fuel-category"]["Diesel-Locomotive-fluid"] then
+      chonky.burner.fuel_categories =
+        chonky.burner.fuel_categories or {chonky.burner.fuel_category}
+      chonky.burner.fuel_category = nil
+      table.insert(chonky.burner.fuel_categories, "Diesel-Locomotive-fluid")
+    end
     chonky.burner.fuel_inventory_size = 10
   end
   chonky.inventory_size = (chonky.inventory_size or 0) * 4

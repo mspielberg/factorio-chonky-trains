@@ -5,6 +5,8 @@
   "author":"therax",
   "homepage":"https://mods.factorio.com/mod/chonky-trains",
   "factorio_version":"0.17",
-  "version":"0.2.0",
-  "dependencies":[]
+  "version":"0.3.0",
+  "dependencies":[
+    "? Diesel-Locomotive"
+  ]
 }
