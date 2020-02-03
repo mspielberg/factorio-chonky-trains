@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2020-02-02
+  Compatibility:
+    - Update to Factorio 0.18.
+    - Add support for Bob's Logistics and possibly other mods that add rolling stock.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2019-12-04
   Compatibility:

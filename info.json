@@ -4,9 +4,7 @@
   "description":"Tired of tiny toy trains? Give your factory some real weight with these realistically-scaled locomotives and wagons.",
   "author":"therax",
   "homepage":"https://mods.factorio.com/mod/chonky-trains",
-  "factorio_version":"0.17",
-  "version":"0.3.0",
-  "dependencies":[
-    "? Diesel-Locomotive"
-  ]
+  "factorio_version":"0.18",
+  "version":"0.4.0",
+  "dependencies":[]
 }
