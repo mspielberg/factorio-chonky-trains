@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 2020-02-03
+  Bugfixes:
+    - Fix recipes not being unlocked when upgrading from v0.3.0 or earlier.
+  Minor Features:
+    - Add setting to disable normal trains, leaving only the chonky variants.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 2020-02-02
   Compatibility:
