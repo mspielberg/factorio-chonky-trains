@@ -196,10 +196,15 @@ for _, tech in pairs(data.raw.technology) do
     if effect.type == "unlock-recipe" then
       local chonky_recipe_name = "chonky-"..effect.recipe
       if data.raw.recipe[chonky_recipe_name] then
-        table.insert(tech.effects, {
-          type = "unlock-recipe",
-          recipe = chonky_recipe_name,
-        })
+        if settings.startup["chonky-trains-remove-normal"].value then
+          data.raw.recipe[effect.recipe].enabled = false
+          effect.recipe = chonky_recipe_name
+        else
+          table.insert(tech.effects, {
+            type = "unlock-recipe",
+            recipe = chonky_recipe_name,
+          })
+        end
       end
     end
   end
