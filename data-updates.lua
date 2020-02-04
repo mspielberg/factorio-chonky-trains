@@ -121,7 +121,7 @@ local function create_rolling_stock(proto)
   chonky.inventory_size = (chonky.inventory_size or 0) * 4
   chonky.capacity = (chonky.capacity or 0) * 4
   chonky.max_power = ((chonky.max_power or "0kW"):match("^[0-9]*") * 4).."kW"
-  chonky.max_speed = chonky.max_speed * 0.4
+  chonky.max_speed = chonky.max_speed * 0.45
   chonky.weight = 10000
   data:extend{chonky}
 
